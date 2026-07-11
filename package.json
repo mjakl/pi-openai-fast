@@ -1,0 +1,62 @@
+{
+  "name": "@mjakl/pi-openai-fast",
+  "version": "0.1.0",
+  "description": "OpenAI Codex Fast mode for Pi, including GPT-5.6 Sol, Terra, and Luna",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "openai-fast.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm pack --dry-run >/dev/null",
+    "prepublishOnly": "npm run check"
+  },
+  "engines": {
+    "node": ">=20.3"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "keywords": [
+    "pi",
+    "pi-package",
+    "openai",
+    "codex",
+    "fast",
+    "priority"
+  ],
+  "author": "Michael Jakl",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjakl/pi-openai-fast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjakl/pi-openai-fast/issues"
+  },
+  "homepage": "https://github.com/mjakl/pi-openai-fast#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.80.6",
+    "@types/node": "^22.19.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  }
+}
